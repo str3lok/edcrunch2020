@@ -227,6 +227,12 @@ $('.sliderSpeaker').slick({
       slidesToShow: 2,
       slidesToScroll: 1
     }
+  }, {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
   }]
 }); //- слайдер на главной - Новости EDCRUNCH 
 
@@ -247,6 +253,12 @@ $('.sliderNews').slick({
     breakpoint: 960,
     settings: {
       slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1,
       slidesToScroll: 1
     }
   }]

@@ -20,8 +20,8 @@
 		<link rel="icon" href="images/touch/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" href="images/touch/android-icon-192x192.png" sizes="196x196">
 		<link rel="manifest" href="images/touch/manifest.json">
-		<link rel="stylesheet" href="css/main.css?v=1597120809579">
-		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597120809579">
+		<link rel="stylesheet" href="css/main.css?v=1597168461708">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597168461708">
 	</head>
 	<body>
 		<header>
@@ -29,6 +29,7 @@
 				<div class="container">
 					<div class="header-panel-top-right">
 						<div class="header-panel-top-auth"><a href="#">Личный кабинет</a></div>
+						<div class="touch-nav"><i></i><i></i><i></i></div>
 					</div>
 				</div>
 			</div>
@@ -42,53 +43,61 @@
 									<svg class="icon-logo">
 										<use xlink:href="images/sprites.svg#logo"></use>
 									</svg></a></div>
-							<ul class="main-nav">
-								<li class="parent-item item-w282">
-									<div class="nav-dropdown-box"><a href="#">О конференции</a>
-										<ul class="sub-nav">
-											<li><a href="#about">О конференции</a></li>
-											<li><a href="#sponsors">Партнеры</a></li>
-											<li><a href="#partners">Информационные партнеры</a></li>
-											<li><a href="#news">Новости</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="item-w231"><a href="#">Программа</a></li>
-								<li class="parent-item">
-									<div class="nav-dropdown-box"><a href="#">Конкурсы</a>
-										<ul class="sub-nav">
-											<li><a href="/gesa">GESAwards</a></li>
-											<li><a href="/award">EDCRUNCH AWARD</a></li>
-											<li><a href="/product">EDCRUNCH AWARD PRODUCT</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="#buy">Участникам </a></li>
-								<li class="parent-item item-w282">
-									<div class="nav-dropdown-box"><a href="#">Основные темы</a>
-										<ul class="sub-nav">
-											<li><a href="#about">EdTech-стартапам</a></li>
-											<li><a href="#pr">Специалистам по развитию персонала</a></li>
-											<li><a href="#uni">Университетам</a></li>
-											<li><a href="#sch">Школам, лицеям, гимназиям</a></li>
-											<li><a href="#kid">Дошкольным учреждениям</a></li>
-											<li><a href="#par">Родителям</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="item-w231"><a href="#speakers">Спикеры</a></li>
-							</ul>
+							<div class="nav__container">
+								<div class="nav__content">
+									<div class="nav-close"><i></i><i></i><i></i></div>
+									<ul class="main-nav">
+										<li class="parent-item item-w282">
+											<div class="nav-dropdown-box"><a href="#">О конференции</a>
+												<ul class="sub-nav">
+													<li><a href="#about">О конференции</a></li>
+													<li><a href="#sponsors">Партнеры</a></li>
+													<li><a href="#partners">Информационные партнеры</a></li>
+													<li><a href="#news">Новости</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="item-w231"><a href="#">Программа</a></li>
+										<li class="parent-item">
+											<div class="nav-dropdown-box"><a href="#">Конкурсы</a>
+												<ul class="sub-nav">
+													<li><a href="/gesa">GESAwards</a></li>
+													<li><a href="/award">EDCRUNCH AWARD</a></li>
+													<li><a href="/product">EDCRUNCH AWARD PRODUCT</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="#buy">Участникам </a></li>
+										<li class="parent-item item-w282">
+											<div class="nav-dropdown-box"><a href="#">Основные темы</a>
+												<ul class="sub-nav">
+													<li><a href="#about">EdTech-стартапам</a></li>
+													<li><a href="#pr">Специалистам по развитию персонала</a></li>
+													<li><a href="#uni">Университетам</a></li>
+													<li><a href="#sch">Школам, лицеям, гимназиям</a></li>
+													<li><a href="#kid">Дошкольным учреждениям</a></li>
+													<li><a href="#par">Родителям</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="item-w231"><a href="#speakers">Спикеры</a></li>
+									</ul>
+								</div>
+								<div class="nav-hide"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="main-bn-container">
 					<div class="container">
 						<div class="main-bn-content">
-							<div class="main-bn-left"><a class="btn-blue" href="#">Купить билет</a></div>
+							<div class="main-bn-left sm-hidden"><a class="btn-blue" href="#">Купить билет</a></div>
 							<div class="main-bn-right">
 								<div class="main-bn-title">Онлайн- конференция EDCRUNCH</div>
 								<p>Говорим о технологиях в образовании.<br> Рассказываем, как, когда и зачем их <br> использовать в детском саду, школе,<br> университете, стартапе и корпорации.</p>
-								<p>  11-13 ноября 2020 года</p>
+								<p class="xs-hidden">11-13 ноября 2020 года</p>
+								<div class="sm-visible"><a class="btn-blue" href="#">Купить билет</a></div>
+								<p class="xs-visible">11-13 ноября 2020 года</p>
 							</div>
 						</div>
 					</div>
@@ -114,6 +123,7 @@
 					<li class="tl-color-edt">
 						<div class="container">
 							<div class="tl-content">
+								<div class="btn-tl-show btn-tl-js"></div>
 								<div class="tl-abbr"> <span>EDT</span></div>
 								<div class="tl-box">
 									<div class="tl-title">EDTECH-СТАРТАПЫ</div>
@@ -126,6 +136,7 @@
 					<li class="tl-color-hr">
 						<div class="container">
 							<div class="tl-content">
+								<div class="btn-tl-show btn-tl-js"></div>
 								<div class="tl-abbr"> <span>HR</span></div>
 								<div class="tl-box">
 									<div class="tl-title">СПЕЦИАЛИСТЫ ПО РАЗВИТИЮ ПЕРСОНАЛА</div>
@@ -138,6 +149,7 @@
 					<li class="tl-color-uni">
 						<div class="container">
 							<div class="tl-content">
+								<div class="btn-tl-show btn-tl-js"></div>
 								<div class="tl-abbr"> <span>UNI</span></div>
 								<div class="tl-box">
 									<div class="tl-title">УНИВЕРСИТЕТЫ</div>
@@ -150,6 +162,7 @@
 					<li class="tl-color-sch">
 						<div class="container">
 							<div class="tl-content">
+								<div class="btn-tl-show btn-tl-js"></div>
 								<div class="tl-abbr"><span>SCH</span></div>
 								<div class="tl-box">
 									<div class="tl-title">ШКОЛЫ, ГИМНАЗИИ И ЛИЦЕИ</div>
@@ -162,6 +175,7 @@
 					<li class="tl-color-kid">
 						<div class="container">
 							<div class="tl-content">
+								<div class="btn-tl-show btn-tl-js"></div>
 								<div class="tl-abbr"> <span>KID</span></div>
 								<div class="tl-box">
 									<div class="tl-title">ДОШКОЛЬНЫЕ ОРГАНИЗАЦИИ</div>
@@ -174,6 +188,7 @@
 					<li class="tl-color-par">
 						<div class="container">
 							<div class="tl-content">
+								<div class="btn-tl-show btn-tl-js"></div>
 								<div class="tl-abbr"><span>PAR</span></div>
 								<div class="tl-box">
 									<div class="tl-title">РОДИТЕЛИ</div>
@@ -407,24 +422,24 @@
 							<div class="ticket-content"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-info">
 												<svg class="icon-info">
 													<use xlink:href="images/sprites.svg#icon-info"></use>
-												</svg></span></span><span class="ticket-link-title">Два онлайн-дня <span>и </span> один на площадке <span>в Москве</span></span><span class="ticket-link-bottom"><span class="ticket-link-price">6 000 &#8381;</span><span class="ticket-link-old-price">15 000 &#8381;</span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span><span>Купить билеты</span><span>Купить билеты</span><span>Купить билеты</span><span>Купить билеты</span></span></span></a></div>
+												</svg></span></span><span class="ticket-link-title">Два онлайн-дня <span>и </span> один на площадке <span>в Москве</span></span><span class="ticket-link-bottom"><span class="ticket-link-price">6 000 &#8381;</span><span class="ticket-link-old-price"><span>15 000 &#8381;</span></span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span><span>Купить билеты</span><span>Купить билеты</span><span>Купить билеты</span><span>Купить билеты</span></span></span></a></div>
 						</li>
 						<li class="ticket-4">
-							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-circle"></span><span class="ticket-link-circle"></span></span><span class="ticket-link-title">Только <span>первый</span> день онлайн</span><span class="ticket-link-bottom"><span class="ticket-link-price">2 500 &#8381;</span><span class="ticket-link-old-price">6 000 &#8381;</span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
+							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-circle"></span><span class="ticket-link-circle"></span></span><span class="ticket-link-title">Только <span>первый</span> день онлайн</span><span class="ticket-link-bottom"><span class="ticket-link-price">2 500 &#8381;</span><span class="ticket-link-old-price"> <span>6 000 &#8381;</span></span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
 						</li>
 						<li class="ticket-4">
-							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-circle"></span><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-circle"></span></span><span class="ticket-link-title">Только <span>второй</span> день онлайн </span><span class="ticket-link-bottom"><span class="ticket-link-price">2 500 &#8381;</span><span class="ticket-link-old-price">6 000 &#8381;</span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
+							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-circle"></span><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-circle"></span></span><span class="ticket-link-title">Только <span>второй</span> день онлайн </span><span class="ticket-link-bottom"><span class="ticket-link-price">2 500 &#8381;</span><span class="ticket-link-old-price"><span>6 000 &#8381;</span></span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
 						</li>
 						<li class="ticket-4">
-							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-circle"></span><span class="ticket-link-circle"></span><span class="ticket-link-tag">ONLINE</span></span><span class="ticket-link-title">Только <span>третий</span> день онлайн</span><span class="ticket-link-bottom"><span class="ticket-link-price">2 500 &#8381;</span><span class="ticket-link-old-price">6 000 &#8381;</span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
+							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-circle"></span><span class="ticket-link-circle"></span><span class="ticket-link-tag">ONLINE</span></span><span class="ticket-link-title">Только <span>третий</span> день онлайн</span><span class="ticket-link-bottom"><span class="ticket-link-price">2 500 &#8381;</span><span class="ticket-link-old-price"><span>6 000 &#8381;</span></span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
 						</li>
-						<li class="ticket-6">
+						<li class="ticket-6 ticket-day-three">
 							<div class="ticket-content ticket-color-blue"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-circle"></span><span class="ticket-link-circle"></span><span class="ticket-link-tag">Offline</span><span class="ticket-link-info">
 												<svg class="icon-info">
 													<use xlink:href="images/sprites.svg#icon-info"></use>
-												</svg></span></span><span class="ticket-link-title">Только третий день <br><span>на площадке в Москве</span></span><span class="ticket-link-bottom"><span class="ticket-link-price">4 000 &#8381;</span><span class="ticket-link-old-price">8 000 &#8381;</span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
+												</svg></span></span><span class="ticket-link-title">Только третий день <br><span>на площадке в Москве</span></span><span class="ticket-link-bottom"><span class="ticket-link-price">4 000 &#8381;</span><span class="ticket-link-old-price"><span>8 000 &#8381;</span></span></span></span><span class="ticket-link-footer"><span class="ticket-link-text"><span>Купить билеты</span></span></span></a></div>
 						</li>
-						<li class="ticket-6">
+						<li class="ticket-6 ticket-edu">
 							<div class="ticket-content ticket-color-blue-dark"><a class="ticket-link" href="#"><span class="ticket-link-head"><span class="ticket-link-top"><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-tag-two"><span class="ticket-link-tag">ONLINE</span><span class="ticket-link-tag">Offline</span></span></span><span class="ticket-link-title">Для государственных образовательных организаций</span><span class="ticket-link-bottom ticket-link-bottom-free"><span class="ticket-link-free"><span class="ticket-link-tooltip-box tooltip-box"><span class="ticket-link-free-icon tooltip-link">
 														<svg class="icon-info2">
 															<use xlink:href="images/sprites.svg#icon-info2"></use>
@@ -570,12 +585,16 @@
 						<div class="slider sliderReviews slider-style-white">
 							<div class="main-reviews-box">
 								<div class="main-reviews-content">
+									<div class="main-reviews-action-box xs-visible">
+										<div class="main-reviews-action-info">НИУ ВШЭ						</div>
+										<div class="main-reviews-action-title">Исак Фрумин</div>
+									</div>
 									<div class="main-reviews-text">
 										<p> «…На конференцию ты всегда приходишь в надежде, что в голову придёт какая-нибудь интересная мысль. И если ты за день узнал одно новое, значит день прошёл не зря. Сегодня день прошёл не зря…»</p>
 									</div>
 									<div class="main-reviews-action">
-										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=Gen4rSmHYzk" data-fancybox></a></div>
-										<div class="main-reviews-action-box">
+										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=Gen4rSmHYzk" data-fancybox><span>Видео-отзыв</span></a></div>
+										<div class="main-reviews-action-box xs-hidden">
 											<div class="main-reviews-action-title">Исак Фрумин</div>
 											<div class="main-reviews-action-info">НИУ ВШЭ</div>
 										</div>
@@ -585,12 +604,16 @@
 							</div>
 							<div class="main-reviews-box">
 								<div class="main-reviews-content">
+									<div class="main-reviews-action-box xs-visible">
+										<div class="main-reviews-action-info">НИУ ВШЭ						</div>
+										<div class="main-reviews-action-title">Исак Фрумин</div>
+									</div>
 									<div class="main-reviews-text">
 										<p> «…На конференцию ты всегда приходишь в надежде, что в голову придёт какая-нибудь интересная мысль. И если ты за день узнал одно новое, значит день прошёл не зря. Сегодня день прошёл не зря…»</p>
 									</div>
 									<div class="main-reviews-action">
-										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=rfE5tGgbp94" data-fancybox></a></div>
-										<div class="main-reviews-action-box">
+										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=rfE5tGgbp94" data-fancybox><span>Видео-отзыв</span></a></div>
+										<div class="main-reviews-action-box xs-hidden">
 											<div class="main-reviews-action-title">Исак Фрумин</div>
 											<div class="main-reviews-action-info">НИУ ВШЭ</div>
 										</div>
@@ -600,12 +623,16 @@
 							</div>
 							<div class="main-reviews-box">
 								<div class="main-reviews-content">
+									<div class="main-reviews-action-box xs-visible">
+										<div class="main-reviews-action-info">НИУ ВШЭ						</div>
+										<div class="main-reviews-action-title">Исак Фрумин</div>
+									</div>
 									<div class="main-reviews-text">
 										<p> «…На конференцию ты всегда приходишь в надежде, что в голову придёт какая-нибудь интересная мысль. И если ты за день узнал одно новое, значит день прошёл не зря. Сегодня день прошёл не зря…»</p>
 									</div>
 									<div class="main-reviews-action">
-										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=-H3rmkCbdbE" data-fancybox></a></div>
-										<div class="main-reviews-action-box">
+										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=-H3rmkCbdbE" data-fancybox><span>Видео-отзыв</span></a></div>
+										<div class="main-reviews-action-box xs-hidden">
 											<div class="main-reviews-action-title">Исак Фрумин</div>
 											<div class="main-reviews-action-info">НИУ ВШЭ</div>
 										</div>
@@ -615,12 +642,16 @@
 							</div>
 							<div class="main-reviews-box">
 								<div class="main-reviews-content">
+									<div class="main-reviews-action-box xs-visible">
+										<div class="main-reviews-action-info">НИУ ВШЭ						</div>
+										<div class="main-reviews-action-title">Исак Фрумин</div>
+									</div>
 									<div class="main-reviews-text">
 										<p> «…На конференцию ты всегда приходишь в надежде, что в голову придёт какая-нибудь интересная мысль. И если ты за день узнал одно новое, значит день прошёл не зря. Сегодня день прошёл не зря…»</p>
 									</div>
 									<div class="main-reviews-action">
-										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=icJkpEZFX3w" data-fancybox></a></div>
-										<div class="main-reviews-action-box">
+										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=icJkpEZFX3w" data-fancybox><span>Видео-отзыв</span></a></div>
+										<div class="main-reviews-action-box xs-hidden">
 											<div class="main-reviews-action-title">Исак Фрумин</div>
 											<div class="main-reviews-action-info">НИУ ВШЭ</div>
 										</div>
@@ -630,12 +661,16 @@
 							</div>
 							<div class="main-reviews-box">
 								<div class="main-reviews-content">
+									<div class="main-reviews-action-box xs-visible">
+										<div class="main-reviews-action-info">НИУ ВШЭ						</div>
+										<div class="main-reviews-action-title">Исак Фрумин</div>
+									</div>
 									<div class="main-reviews-text">
 										<p> «…На конференцию ты всегда приходишь в надежде, что в голову придёт какая-нибудь интересная мысль. И если ты за день узнал одно новое, значит день прошёл не зря. Сегодня день прошёл не зря…»</p>
 									</div>
 									<div class="main-reviews-action">
-										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=4DAXNENk4JY" data-fancybox></a></div>
-										<div class="main-reviews-action-box">
+										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=4DAXNENk4JY" data-fancybox><span>Видео-отзыв</span></a></div>
+										<div class="main-reviews-action-box xs-hidden">
 											<div class="main-reviews-action-title">Исак Фрумин</div>
 											<div class="main-reviews-action-info">НИУ ВШЭ</div>
 										</div>
@@ -645,12 +680,16 @@
 							</div>
 							<div class="main-reviews-box">
 								<div class="main-reviews-content">
+									<div class="main-reviews-action-box xs-visible">
+										<div class="main-reviews-action-info">НИУ ВШЭ						</div>
+										<div class="main-reviews-action-title">Исак Фрумин</div>
+									</div>
 									<div class="main-reviews-text">
 										<p> «…На конференцию ты всегда приходишь в надежде, что в голову придёт какая-нибудь интересная мысль. И если ты за день узнал одно новое, значит день прошёл не зря. Сегодня день прошёл не зря…»</p>
 									</div>
 									<div class="main-reviews-action">
-										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=4DAXNENk4JY" data-fancybox></a></div>
-										<div class="main-reviews-action-box">
+										<div class="btn-review-video-play"><a href="http://www.youtube.com/watch?v=4DAXNENk4JY" data-fancybox><span>Видео-отзыв</span></a></div>
+										<div class="main-reviews-action-box xs-hidden">
 											<div class="main-reviews-action-title">Исак Фрумин</div>
 											<div class="main-reviews-action-info">НИУ ВШЭ</div>
 										</div>
@@ -702,29 +741,29 @@
 			</div>
 			<div class="clear"></div>
 			<div class="main-bottom-text">
-				<div class="bottom-text-block bottom-text-blue-lite">
-					<div style="left: -1098.5px; top: 26px;width: 5146px;position: absolute; display: table;">
+				<div class="bottom-text-block bottom-text-blue-lite bottom-text1">
+					<div>
 						<div class="tn-atom__sbs-anim-wrapper anim-wrapper1">
 							<div class="tn-atom"><img src="images/icons/text-bottom1.svg" alt="#"></div>
 						</div>
 					</div>
 				</div>
-				<div class="bottom-text-block bottom-text-blue">
-					<div style="-1736.5px; top: 26px; width: 4000px;position: absolute; display: table;">
+				<div class="bottom-text-block bottom-text-blue bottom-text2">
+					<div style="left: -1736.5px; top: 26px; width: 4000px;position: absolute; display: table;">
 						<div class="tn-atom__sbs-anim-wrapper anim-wrapper2">
 							<div class="tn-atom"><img src="images/icons/text-bottom2.svg" alt="#"></div>
 						</div>
 					</div>
 				</div>
-				<div class="bottom-text-block bottom-text-blue-lite">
+				<div class="bottom-text-block bottom-text-blue-lite bottom-text3">
 					<div style="left: -550.5px; top: 26px;width: 4000px;position: absolute; display: table;">
 						<div class="tn-atom__sbs-anim-wrapper anim-wrapper3">
 							<div class="tn-atom"><img src="images/icons/text-bottom3.svg" alt="#"></div>
 						</div>
 					</div>
 				</div>
-				<div class="bottom-text-block bottom-text-blue">
-					<div style="-1999.5px; top: 30px;width: 5500px;position: absolute; display: table;">
+				<div class="bottom-text-block bottom-text-blue bottom-text4">
+					<div style="left: -1999.5px; top: 30px;width: 5500px;position: absolute; display: table;">
 						<div class="tn-atom__sbs-anim-wrapper anim-wrapper4">
 							<div class="tn-atom"><img src="images/icons/text-bottom4.svg" alt="#"></div>
 						</div>
@@ -769,7 +808,7 @@
 							</ul>
 						</div>
 						<div class="footer-blue-social">
-							<div class="footer-blue-title">Присоединяйтесь к нам <br>в социальных сетях</div>
+							<div class="footer-blue-title">Присоединяйтесь к нам <br>в социальных сетях:</div>
 							<ul class="footer-social-list">
 								<li><a href="https://www.facebook.com/EdCrunchNews/" target="_blank">
 										<svg class="icon-fb">
@@ -827,10 +866,10 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/vendor.js?v=1597120809580"></script>
-		<script src="js/main.js?v=1597120809580"></script>
-		<script src="js/packery.pkgd.min.js?v=1597120809580"></script>
-		<script src="js/jquery.fancybox.min.js?v=1597120809580"></script>
-		<script src="js/common.js?v=1597120809580"></script>
+		<script src="js/vendor.js?v=1597168461709"></script>
+		<script src="js/main.js?v=1597168461709"></script>
+		<script src="js/packery.pkgd.min.js?v=1597168461709"></script>
+		<script src="js/jquery.fancybox.min.js?v=1597168461709"></script>
+		<script src="js/common.js?v=1597168461709"></script>
 	</body>
 </html>
