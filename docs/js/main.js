@@ -163,7 +163,11 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
+
+
 /* eslint-disable no-new */
  //- show/hide menu tablet
 
@@ -427,6 +431,54 @@ $('.btn-tl-js').on('click', function (e) {
     $(parentItem).find('.tl-link').slideDown();
   }
 });
+$('.link-scroll').on('click', function (e) {
+  e.preventDefault();
+  var boxHash = $(this).attr('href');
+  scrollTo($(boxHash).offset().top + 50, 1000);
+});
+
+function scrollTo(to) {
+  var $obj = jQuery('html, body');
+  var top = 0;
+  var speed = 500;
+  var offsetX = 50;
+
+  if (_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default()(to) == 'object') {
+    top = to.offset().top;
+  } else if (typeof to == 'string') {
+    top = jQuery(to).offset().top;
+  } else if (typeof to == 'number') {
+    top = to;
+  }
+
+  if (arguments.length > 1) {
+    if (typeof arguments[0] == 'number' && typeof arguments[1] == 'number') {
+      speed = arguments[1];
+    } else if (typeof arguments[1] == 'string' || _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default()(arguments[1]) == 'object') {
+      if (_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default()(arguments[1]) == 'object') {
+        $obj = arguments[1];
+      } else if (typeof arguments[1] == 'string') {
+        $obj = jQuery(arguments[1]);
+      }
+    }
+
+    if (typeof arguments[2] == 'number') {
+      speed = arguments[2];
+    }
+  }
+
+  if (jQuery(window).width() < 1000) {
+    offsetX = 130;
+  }
+
+  if (speed == 0) {
+    speed = 1;
+  }
+
+  $obj.animate({
+    scrollTop: top - offsetX
+  }, speed);
+}
 
 function loadPage() {
   try {} catch (e) {}
