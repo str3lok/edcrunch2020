@@ -6173,7 +6173,8 @@ header,
   text-align: center;
   font: 24px/29px "Inter-SemiBold", sans-serif;
   color: #000;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding: 0 10px; }
 
 .modal-work-list {
   float: left;
@@ -6296,10 +6297,16 @@ header,
   margin-bottom: 20px; }
 
 .m-col-4 {
-  width: 33.33333333%; }
+  width: 100%; }
+  @media (min-width: 1280px) {
+    .m-col-4 {
+      width: 33.33333333%; } }
 
 .m-col-8 {
-  width: 66.66666667%; }
+  width: 100%; }
+  @media (min-width: 1280px) {
+    .m-col-8 {
+      width: 66.66666667%; } }
 
 .m-col-12 {
   width: 100%; }
@@ -6768,7 +6775,66 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     font-size: 14px !important;
     line-height: 45px !important;
     height: 45px !important;
-    width: 190px; } }
+    width: 190px; }
+  .modal-big {
+    max-width: 680px !important; }
+  .modal-work-icon img {
+    width: 65px;
+    height: 65px; }
+  .modal-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    padding: 0 50px; }
+  .modal-contacts-title {
+    font-size: 20px;
+    line-height: 24px; }
+  .modal-work-list li {
+    margin: 0 13px; }
+  .modal-work-icon {
+    width: 65px; }
+  .modal-work-title {
+    font-size: 16px;
+    line-height: 20px; }
+  .modal-work-box a {
+    font-size: 18px;
+    line-height: 18px; }
+  .modal-container .fancybox-close-small {
+    width: 28px !important;
+    height: 28px !important;
+    right: 15px !important;
+    top: 15px !important;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover; }
+  .modal-content {
+    padding: 30px 0; }
+  .contacts-social-icon svg {
+    width: 65px;
+    height: 65px; }
+  .contacts-social-text {
+    font-size: 15px;
+    line-height: 18px; }
+  .modal-contacts-social-list li {
+    margin: 0 25px; }
+  .modal-contacts-social {
+    padding: 20px 0; }
+  .modal-contacts-row {
+    margin: 0; }
+  .modal-contacts-col {
+    padding: 0; }
+  .ed-input {
+    height: 50px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 15px; }
+  .btn-contact {
+    width: 290px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px; }
+  .modal-contacts-actions {
+    margin-top: 0; } }
 
 /* END 1279px */
 /* START 1023px */
@@ -7885,9 +7951,111 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     display: block;
     margin-top: 50px; }
   .navFix .main-bn-wrap {
-    z-index: 100; } }
+    z-index: 100; }
+  .modal-container {
+    max-width: 90% !important; }
+  .modal-contacts-title {
+    line-height: 30px; }
+  .modal-contacts-title {
+    padding: 0 20px; }
+  .modal-work-icon {
+    margin-right: 15px; }
+  .modal-work-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .modal-work-list li {
+      margin: 0;
+      width: 60%; }
+      .modal-work-list li:first-child {
+        margin-bottom: 20px; }
+  .modal-contacts-social-list {
+    padding: 0 50px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .modal-contacts-social-list li {
+      margin-bottom: 25px; } }
 
 /* END 767px */
+/* START 639px */
+@media (max-width: 639px) {
+  .modal-container {
+    max-width: 100% !important;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px; }
+  .modal-title {
+    font-size: 22px;
+    padding: 0 10px;
+    margin-bottom: 20px; }
+  .modal-content {
+    padding: 30px 0 25px; }
+  .modal-container .fancybox-close-small {
+    width: 20px !important;
+    height: 20px !important;
+    right: 10px !important;
+    top: 10px !important;
+    background: none; }
+    .modal-container .fancybox-close-small svg {
+      display: block; }
+  .modal-contacts-title {
+    padding: 0 10px;
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .modal-work-list {
+    padding: 0 10px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .modal-work-list li {
+      width: 100%; }
+  .modal-work-icon img {
+    width: 50px;
+    height: 50px; }
+  .modal-work-icon {
+    width: 50px; }
+  .modal-work-title {
+    font-size: 14px;
+    line-height: 14px; }
+  .modal-contacts-social-list {
+    padding: 0 10px; }
+  .contacts-social-icon svg {
+    width: 50px;
+    height: 50px; }
+  .contacts-social-icon {
+    height: 50px;
+    display: block; }
+  .contacts-social-text {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 8px; }
+  .modal-contacts-social-list li {
+    margin: 15px; }
+  .modal-contacts-form {
+    padding: 20px 10px 0; }
+    .modal-contacts-form .modal-contacts-title {
+      padding: 0; }
+  .ed-input {
+    height: 40px; }
+  .btn-blue {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 40px; } }
+
+/* END 639px */
 /* START 413px */
 @media (max-width: 413px) {
   .last-year-img {
