@@ -877,7 +877,7 @@ h3, .h3 {
     .rb-drop li:first-child {
       border-top: 0; }
 
-.before, .rb-slct::before, .nav-dropdown-box > a::before, .sub-nav::before, .sub-nav::after, .main-bn::before, .main-bn::after, .speaker-slider-box::after, .speaker-slider-box::before, .main-by-tickets-info::before, .main-by-tickets-triger li::before, .main-by-tickets-triger li::after, .ticket-link::before, .ticket-link-old-price span::before, .year-triger-btn::before, .main-video-box::before, .btn-tl-show::before, .btn-tl-show::after {
+.before, .rb-slct::before, .nav-dropdown-box > a::before, .sub-nav::before, .sub-nav::after, .main-bn::before, .main-bn::after, .speaker-slider-box::after, .speaker-slider-box::before, .main-by-tickets-info::before, .main-by-tickets-triger li::before, .main-by-tickets-triger li::after, .ticket-link-head::before, .ticket-link-old-price span::before, .ticket-link-footer::before, .year-triger-btn::before, .main-video-box::before, .btn-tl-show::before, .btn-tl-show::after {
   content: "";
   display: block;
   position: absolute; }
@@ -4442,22 +4442,8 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative; }
-  .ticket-link::before {
-    left: 0;
-    top: 0;
-    -webkit-border-radius: 30px;
-       -moz-border-radius: 30px;
-            border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    -webkit-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    -moz-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    z-index: 1; }
-  .ticket-link:hover::before {
+  .ticket-link:hover .ticket-link-head::before,
+  .ticket-link:hover .ticket-link-footer::before {
     opacity: 1; }
 
 .ticket-link-head {
@@ -4483,7 +4469,23 @@ header {
   -webkit-flex: 1;
      -moz-box-flex: 1;
       -ms-flex: 1;
-          flex: 1; }
+          flex: 1;
+  position: relative; }
+  .ticket-link-head::before {
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 30px 30px 0 0;
+       -moz-border-radius: 30px 30px 0 0;
+            border-radius: 30px 30px 0 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    z-index: 1; }
 
 .ticket-link-top {
   width: 100%;
@@ -4627,7 +4629,23 @@ header {
   -webkit-border-radius: 0 0 30px 30px;
      -moz-border-radius: 0 0 30px 30px;
           border-radius: 0 0 30px 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  text-decoration: none !important; }
+  .ticket-link-footer::before {
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 0 0 30px 30px;
+       -moz-border-radius: 0 0 30px 30px;
+            border-radius: 0 0 30px 30px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    z-index: 1; }
 
 .ticket-link-text {
   display: -webkit-box;
@@ -6411,7 +6429,7 @@ header,
   color: #fff;
   background: #00A7D8; }
 
-.is-device-mobile .ticket-link :hover::before, .is-device-tablet .ticket-link :hover::before {
+.is-device-mobile .ticket-link:hover .ticket-link-head::before, .is-device-mobile .ticket-link:hover .ticket-link-footer::before, .is-device-tablet .ticket-link:hover .ticket-link-head::before, .is-device-tablet .ticket-link:hover .ticket-link-footer::before {
   opacity: 0; }
 
 .is-device-mobile .speaker-slider-box:hover::after, .is-device-tablet .speaker-slider-box:hover::after {
@@ -7140,8 +7158,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
   .touch-nav {
     display: block; }
   .main-bn-wrap {
-    position: relative;
-    z-index: 100; }
+    position: relative; }
   .nav__container {
     top: 0;
     max-height: 100vh !important;
@@ -7862,7 +7879,9 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     height: 50px; }
   .page-content {
     display: block;
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .navFix .main-bn-wrap {
+    z-index: 100; } }
 
 /* END 767px */
 /* START 413px */
