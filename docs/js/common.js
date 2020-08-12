@@ -20,7 +20,7 @@ function sliderInit(slider) {
 		arrows: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		touchThreshold: 25,
+		touchThreshold: 50,
  });  
 }
 function sliderDestroy(slider) {

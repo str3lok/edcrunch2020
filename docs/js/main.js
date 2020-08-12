@@ -225,7 +225,7 @@ $('.sliderSpeaker').slick({
   slidesToScroll: 1,
   arrows: true,
   lazyLoad: 'ondemand',
-  touchThreshold: 25,
+  touchThreshold: 50,
   responsive: [{
     breakpoint: 1024,
     settings: {
@@ -248,7 +248,7 @@ $('.sliderNews').slick({
   slidesToScroll: 1,
   arrows: true,
   lazyLoad: 'ondemand',
-  touchThreshold: 25,
+  touchThreshold: 50,
   responsive: [{
     breakpoint: 1024,
     settings: {
@@ -399,7 +399,7 @@ $('.sliderReviews').slick({
   slidesToScroll: 1,
   arrows: true,
   lazyLoad: 'ondemand',
-  touchThreshold: 25
+  touchThreshold: 50
 }); //- show menu mobile
 
 $('.touch-nav').on('click', function (e) {
