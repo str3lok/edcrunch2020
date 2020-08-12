@@ -4630,7 +4630,8 @@ header {
      -moz-border-radius: 0 0 30px 30px;
           border-radius: 0 0 30px 30px;
   overflow: hidden;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  position: relative; }
   .ticket-link-footer::before {
     left: 0;
     top: 0;
@@ -7874,7 +7875,10 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     position: fixed;
     z-index: 100;
     left: 0;
-    top: 0; }
+    top: 0;
+    -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5); }
   .header-panel-top {
     height: 50px; }
   .page-content {
