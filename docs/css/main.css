@@ -882,7 +882,7 @@ h3, .h3 {
   display: block;
   position: absolute; }
 
-.d-block, .rb-select, .wrapper, header, .header-panel-top, .header-container, .sub-nav li, .main-bn, .main-bn-wrap, .main-bn-container, .main-bn-title, .text-anime-container, .idea-container, .idea-text, .themes-container, .themes-list, .themes-list li, .tl-title, .speakers-container, .speaker-main-slider, .speaker-slider-box, .speaker-slider-name, .speaker-slider-text, .speaker-main-action, .btn-speaker-border-blue,
+.d-block, .rb-select, .page-content, .wrapper, header, .header-panel-top, .header-container, .sub-nav li, .main-bn, .main-bn-wrap, .main-bn-container, .main-bn-title, .text-anime-container, .idea-container, .idea-text, .themes-container, .themes-list, .themes-list li, .tl-title, .speakers-container, .speaker-main-slider, .speaker-slider-box, .speaker-slider-name, .speaker-slider-text, .speaker-main-action, .btn-speaker-border-blue,
 .btn-speaker-blue, .main-media-partners, .main-news-container, .main-news-slider, .main-news-action, .main-news-box, .main-news-text, .main-by-tickets-container, .main-by-tickets-title, .main-by-tickets-content, .main-by-tickets-list, .main-by-tickets-count, .main-by-tickets-count-box, .main-by-tickets-counter-text, .main-by-tickets-counter-action, .main-by-tickets-counter-action a, .main-by-container, .main-subscribe, .main-subscribe-form, .subscribe-input, .btn-subscribe, .main-last-year, .last-year-container, .year-triger-title, .year-triger-text, .main-video, .main-video-box, .main-reviews, .main-reviews-slider, .main-participants-say, .main-participants-content, .participants-grid, .main-bottom-text, .bottom-text-block, footer, .footer-sponsor, .footer-sponsor-left, .footer-sponsor-right, .footer-sponsor-title, .footer-blue-container, .footer-contacts-container, .modal-content, .modal-title, .modal-contacts-title, .modal-contacts-social, .modal-contacts-form, .ed-input {
   display: block;
   float: left;
@@ -7860,14 +7860,9 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     top: 0; }
   .header-panel-top {
     height: 50px; }
-  .wrapper {
-    margin-top: 50px;
-    position: relative;
-    z-index: 40; }
-  .navFix header {
-    z-index: 40; }
-  .navFix .wrapper {
-    z-index: 50; } }
+  .page-content {
+    display: block;
+    margin-top: 50px; } }
 
 /* END 767px */
 /* START 413px */

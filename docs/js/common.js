@@ -20,13 +20,14 @@ function sliderInit(slider) {
 		arrows: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		touchThreshold: 25,
  });  
 }
 function sliderDestroy(slider) {
  $('.' + slider).slick('unslick');
 }
 
-// try {
+try {
 
 var grid = document.querySelector('.grid');
 var packeryOptions = {
@@ -91,7 +92,7 @@ function resizePageJs() {
 }//end resizePageJs
 window.addEventListener("resize", resizePageJs);
 
-// } catch (e) {}
+} catch (e) {}
 
 AOS.init();
 
