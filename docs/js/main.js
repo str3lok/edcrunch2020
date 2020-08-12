@@ -316,13 +316,15 @@ if (!$('html').hasClass('is-device-tablet') || !$('html').hasClass('is-device-mo
     $(this).parent().addClass('is-active');
   }, function () {
     $(this).parent().removeClass('is-active');
-  }); //- тригеры по ховеру 
-
-  $(".year-triger-btn").hover(function () {
-    $(this).parent().addClass('is-active');
-  }, function () {
-    $(this).parent().removeClass('is-active');
-  });
+  }); // //- тригеры по ховеру 
+  // $(".year-triger-btn").hover(
+  // 	function () {
+  // 		$(this).parent().addClass('is-active');
+  // 	},
+  // 	function () {
+  // 		$(this).parent().removeClass('is-active');
+  // 	}
+  // );    
 } //- end is-device-tablet
 //- tooltip по клику
 
