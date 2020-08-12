@@ -4726,6 +4726,27 @@ header {
          -o-transform: rotate(-45deg);
             transform: rotate(-45deg); }
 
+header,
+.idea-container,
+.themes-container,
+.speakers-container,
+.main-media-partners,
+.main-news-container,
+.main-by-tickets-container,
+.main-by-tickets-count,
+.main-by-container,
+.main-subscribe,
+.main-last-year,
+.main-video,
+.main-reviews,
+.main-participants-say,
+.main-bottom-text,
+.footer-sponsor,
+.footer-blue-container,
+.footer-contacts-container {
+  content-visibility: auto;
+  contain-intrinsic-size: 100px 1160px; }
+
 @supports (-webkit-touch-callout: none) {
   .nav__container, .nav__content {
     height: -webkit-fill-available; } }
