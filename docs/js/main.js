@@ -406,13 +406,17 @@ $('.touch-nav').on('click', function (e) {
   $('.nav__content').addClass('menuShow');
 }); //- hide menu mobile
 
-$('.nav-close, .nav-hide').on('click', function (e) {
-  e.preventDefault();
+function closeMobileMenu() {
   $('.nav__content').removeClass('menuShow');
   $('html').removeClass('htmlFix');
   $('body').removeClass('navFix');
   $('.nav-hide').hide();
   $('.nav__container').fadeOut();
+}
+
+$('.nav-close, .nav-hide').on('click', function (e) {
+  e.preventDefault();
+  closeMobileMenu();
 }); // show/hide ДЛЯ ВСЕХ УЧАСТНИКОВ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА
 
 $('.btn-tl-js').on('click', function (e) {
@@ -433,6 +437,12 @@ $('.btn-tl-js').on('click', function (e) {
 });
 $('.link-scroll').on('click', function (e) {
   e.preventDefault();
+  var windowWidth = $(window).outerWidth();
+
+  if (windowWidth <= 767) {
+    closeMobileMenu();
+  }
+
   var boxHash = $(this).attr('href');
   scrollTo($(boxHash).offset().top + 50, 1000);
 });
