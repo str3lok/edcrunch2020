@@ -20,8 +20,8 @@
 		<link rel="icon" href="images/touch/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" href="images/touch/android-icon-192x192.png" sizes="196x196">
 		<link rel="manifest" href="images/touch/manifest.json">
-		<link rel="stylesheet" href="css/main.css?v=1597171192308">
-		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597171192308">
+		<link rel="stylesheet" href="css/main.css?v=1597210824023">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597210824023">
 	</head>
 	<body>
 		<header>
@@ -50,10 +50,10 @@
 										<li class="parent-item item-w282">
 											<div class="nav-dropdown-box"><a href="#">О конференции</a>
 												<ul class="sub-nav">
-													<li><a href="#about">О конференции</a></li>
-													<li><a href="#sponsors">Партнеры</a></li>
-													<li><a href="#partners">Информационные партнеры</a></li>
-													<li><a href="#news">Новости</a></li>
+													<li><a class="link-scroll" href="#about">О конференции</a></li>
+													<li><a class="link-scroll" href="#sponsors">Партнеры</a></li>
+													<li><a class="link-scroll" href="#partners">Информационные партнеры</a></li>
+													<li><a class="link-scroll" href="#news">Новости</a></li>
 												</ul>
 											</div>
 										</li>
@@ -67,20 +67,20 @@
 												</ul>
 											</div>
 										</li>
-										<li><a href="#buy">Участникам </a></li>
+										<li><a class="link-scroll" href="#buy">Участникам </a></li>
 										<li class="parent-item item-w282">
 											<div class="nav-dropdown-box"><a href="#">Основные темы</a>
 												<ul class="sub-nav">
-													<li><a href="#about">EdTech-стартапам</a></li>
-													<li><a href="#pr">Специалистам по развитию персонала</a></li>
-													<li><a href="#uni">Университетам</a></li>
-													<li><a href="#sch">Школам, лицеям, гимназиям</a></li>
-													<li><a href="#kid">Дошкольным учреждениям</a></li>
-													<li><a href="#par">Родителям</a></li>
+													<li><a class="link-scroll" href="#edt">EdTech-стартапам</a></li>
+													<li><a class="link-scroll" href="#pr">Специалистам по развитию персонала</a></li>
+													<li><a class="link-scroll" href="#uni">Университетам</a></li>
+													<li><a class="link-scroll" href="#sch">Школам, лицеям, гимназиям</a></li>
+													<li><a class="link-scroll" href="#kid">Дошкольным учреждениям</a></li>
+													<li><a class="link-scroll" href="#par">Родителям</a></li>
 												</ul>
 											</div>
 										</li>
-										<li class="item-w231"><a href="#speakers">Спикеры</a></li>
+										<li class="item-w231"><a class="link-scroll" href="#speakers">Спикеры</a></li>
 									</ul>
 								</div>
 								<div class="nav-hide"></div>
@@ -112,13 +112,13 @@
 				<div class="text-anime-three text-anime"><img src="images/sprites/svg/text3.svg" alt="#"></div>
 			</div>
 			<div class="clear"></div>
-			<div class="idea-container">
+			<div class="idea-container" id="about">
 				<div class="container">
 					<div class="idea-text">ДЛЯ ВСЕХ УЧАСТНИКОВ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА</div>
 				</div>
 			</div>
 			<div class="clear"></div>
-			<div class="themes-container">
+			<div class="themes-container" id="edt">
 				<ul class="themes-list">
 					<li class="tl-color-edt">
 						<div class="container">
@@ -133,7 +133,7 @@
 						</div>
 						<div class="tl-link"><span class="container"><span class="tl-row"><span class="tl-col tl-w520"><span class="tl-text">Расскажем, как определить потребности целевой аудитории, собрать команду и уже на старте понять степень успешности проекта. Поговорим о том, куда движется рынок EdTech в стране и мире.</span></span><span class="tl-col tl-w510"><span class="tl-text">Обсудим тенденции, востребованные технологии в образовательной сфере, а также государственно-частное партнёрство. Познакомим с настоящими и будущими клиентами и их ожиданиями.</span></span></span></span></div>
 					</li>
-					<li class="tl-color-hr">
+					<li class="tl-color-hr" id="pr">
 						<div class="container">
 							<div class="tl-content">
 								<div class="btn-tl-show btn-tl-js"></div>
@@ -146,7 +146,7 @@
 						</div>
 						<div class="tl-link"><span class="container"><span class="tl-row"><span class="tl-col tl-w520"><span class="tl-text">Поговорим о новых подходах в поиске и управлении талантами, инновационных инструментах подтверждения навыков и компетенций за пределами CV. Расскажем, как работать с теми, кто только вышел на трудовой рынок — поколением Z, которое понимает интерфейсы с одного взгляда и создает gig-экономику.</span></span><span class="tl-col tl-w510"><span class="tl-text">Обсудим, как развивать сотрудников и вовлекать их в процесс обучения, чтобы не прибегать к хантингу.</span></span></span></span></div>
 					</li>
-					<li class="tl-color-uni">
+					<li class="tl-color-uni" id="uni">
 						<div class="container">
 							<div class="tl-content">
 								<div class="btn-tl-show btn-tl-js"></div>
@@ -159,7 +159,7 @@
 						</div>
 						<div class="tl-link"><span class="container"><span class="tl-row"><span class="tl-col tl-w520"><span class="tl-text">На примере партнёрств между университетами и компаниями-разработчиками разберёмся, можно ли совместить традиционные подходы с новыми форматами обучения. Расскажем, что принесут новые способы преподавания и каких инфраструктурных изменений в вузе они потребуют.</span></span><span class="tl-col tl-w510"><span class="tl-text">Поможем понять, куда движется высшее образование, как на него повлиял карантин и почему дистант — это не онлайн.</span></span></span></span></div>
 					</li>
-					<li class="tl-color-sch">
+					<li class="tl-color-sch" id="sch">
 						<div class="container">
 							<div class="tl-content">
 								<div class="btn-tl-show btn-tl-js"></div>
@@ -172,7 +172,7 @@
 						</div>
 						<div class="tl-link"><span class="container"><span class="tl-row"><span class="tl-col tl-w520"><span class="tl-text">Расскажем, что происходит с управлением и реализацией образовательных программ, как меняется система оценивания, как должна проходить подготовка и переподготовка учителей.</span></span><span class="tl-col tl-w510"><span class="tl-text">Рассмотрим альтернативные модели обучения с применением образовательных технологий и выясним, как без потерь совместить их с традиционными методами.</span></span></span></span></div>
 					</li>
-					<li class="tl-color-kid">
+					<li class="tl-color-kid" id="kid">
 						<div class="container">
 							<div class="tl-content">
 								<div class="btn-tl-show btn-tl-js"></div>
@@ -185,7 +185,7 @@
 						</div>
 						<div class="tl-link"><span class="container"><span class="tl-row"><span class="tl-col tl-w520"><span class="tl-text">Расскажем, как оставаться актуальными в эпоху, когда меняется детское поведение и привычки. Покажем технологичные решения для создания развивающей образовательной среды.</span></span><span class="tl-col tl-w510"><span class="tl-text">Поделимся примерами и результатами использования новых педагогических методик, приемов и способов обучения в дошкольном учебном заведении.</span></span></span></span></div>
 					</li>
-					<li class="tl-color-par">
+					<li class="tl-color-par" id="par">
 						<div class="container">
 							<div class="tl-content">
 								<div class="btn-tl-show btn-tl-js"></div>
@@ -201,7 +201,7 @@
 				</ul>
 			</div>
 			<div class="clear"></div>
-			<div class="speakers-container">
+			<div class="speakers-container" id="speakers">
 				<div class="container">
 					<div class="speaker-main-title">
 						<div class="speaker-main-title-left">
@@ -266,7 +266,7 @@
 				</div>
 			</div>
 			<div class="clear"></div>
-			<div class="main-media-partners">
+			<div class="main-media-partners" id="partners">
 				<div class="main-media-content">
 					<div><img src="images/info-partners/1.png" alt="#"></div>
 					<div><img src="images/info-partners/2.png" alt="#"></div>
@@ -294,7 +294,7 @@
 				</div>
 			</div>
 			<div class="clear"></div>
-			<div class="main-news-container">
+			<div class="main-news-container" id="news">
 				<div class="container">
 					<div class="idea-text">Новости EDCRUNCH</div>
 					<div class="clear"></div>
@@ -408,7 +408,7 @@
 				</div>
 			</div>
 			<div class="clear"></div>
-			<div class="main-by-container">
+			<div class="main-by-container" id="buy">
 				<div class="container">
 					<div class="speaker-main-title">
 						<div class="speaker-main-title-left">
@@ -866,10 +866,10 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/vendor.js?v=1597171192315"></script>
-		<script src="js/main.js?v=1597171192315"></script>
-		<script src="js/packery.pkgd.min.js?v=1597171192315"></script>
-		<script src="js/jquery.fancybox.min.js?v=1597171192315"></script>
-		<script src="js/common.js?v=1597171192315"></script>
+		<script src="js/vendor.js?v=1597210824024"></script>
+		<script src="js/main.js?v=1597210824024"></script>
+		<script src="js/packery.pkgd.min.js?v=1597210824024"></script>
+		<script src="js/jquery.fancybox.min.js?v=1597210824024"></script>
+		<script src="js/common.js?v=1597210824024"></script>
 	</body>
 </html>
