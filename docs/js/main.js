@@ -434,7 +434,8 @@ $('.btn-tl-js').on('click', function (e) {
     $(this).addClass('is-active');
     $(parentItem).find('.tl-link').slideDown();
   }
-});
+}); //- плавная прокрутка до блоков
+
 $('.link-scroll').on('click', function (e) {
   e.preventDefault();
   var windowWidth = $(window).outerWidth();
@@ -445,7 +446,15 @@ $('.link-scroll').on('click', function (e) {
 
   var boxHash = $(this).attr('href');
   scrollTo($(boxHash).offset().top + 50, 1000);
-});
+}); //-время в инпуте
+// $('.ed-timepicker').inputmask("00:00"); 
+// $('.ed-timepicker').on('change', function(){
+// 	var time = $(this).val();
+// 	var min = time.split( ":" );
+// 	if (min[1] >= 60) {
+// 		$(this).val(min[0]+':00');
+// 	}
+// });
 
 function scrollTo(to) {
   var $obj = jQuery('html, body');
@@ -535,7 +544,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import 'magnific-popup';
+ // import 'inputmask';
+// import 'magnific-popup';
 // import 'jquery-datetimepicker';
 // import 'jquery-mousewheel';
 // import 'malihu-custom-scrollbar-plugin';
