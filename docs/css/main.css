@@ -880,7 +880,7 @@ h3, .h3 {
   position: absolute; }
 
 .d-block, .rb-select, .page-content, .wrapper, header, .header-panel-top, .header-container, .sub-nav li, .main-bn, .main-bn-wrap, .main-bn-container, .main-bn-title, .text-anime-container, .idea-container, .idea-text, .themes-container, .themes-list, .themes-list li, .tl-title, .speakers-container, .speaker-main-slider, .speaker-slider-box, .speaker-slider-name, .speaker-slider-text, .speaker-main-action, .btn-speaker-border-blue,
-.btn-speaker-blue, .main-media-partners, .main-news-container, .main-news-slider, .main-news-action, .main-news-box, .main-news-text, .main-by-tickets-container, .main-by-tickets-title, .main-by-tickets-content, .main-by-tickets-list, .main-by-tickets-count, .main-by-tickets-count-box, .main-by-tickets-counter-text, .main-by-tickets-counter-action, .main-by-tickets-counter-action a, .main-by-container, .main-subscribe, .main-subscribe-form, .subscribe-input, .btn-subscribe, .main-last-year, .last-year-container, .year-triger-title, .year-triger-text, .main-video, .main-video-box, .main-reviews, .main-reviews-slider, .main-participants-say, .main-participants-content, .participants-grid, .main-bottom-text, .bottom-text-block, footer, .footer-sponsor, .footer-sponsor-left, .footer-sponsor-right, .footer-sponsor-title, .footer-blue-container, .footer-contacts-container, .modal-content, .modal-title, .modal-contacts-title, .modal-contacts-social, .modal-contacts-form, .ed-input, .ed-select-css, .modal-contacts-text-required {
+.btn-speaker-blue, .main-media-partners, .main-news-container, .main-news-slider, .main-news-action, .main-news-box, .main-news-text, .main-by-tickets-container, .main-by-tickets-title, .main-by-tickets-content, .main-by-tickets-list, .main-by-tickets-count, .main-by-tickets-count-box, .main-by-tickets-counter-text, .main-by-tickets-counter-action, .main-by-tickets-counter-action a, .main-by-container, .main-subscribe, .main-subscribe-form, .subscribe-input, .btn-subscribe, .main-last-year, .last-year-container, .year-triger-title, .year-triger-text, .main-video, .main-video-box, .main-reviews, .main-reviews-slider, .main-participants-say, .main-participants-content, .participants-grid, .main-bottom-text, .bottom-text-block, footer, .footer-sponsor, .footer-sponsor-left, .footer-sponsor-right, .footer-sponsor-title, .footer-blue-container, .footer-contacts-container, .modal-content, .modal-title, .modal-contacts-title, .modal-contacts-social, .modal-contacts-form, .ed-input, .ed-select-css, .modal-contacts-text-required, .modal-sent-text {
   display: block;
   float: left;
   width: 100%; }
@@ -6419,6 +6419,34 @@ textarea.ed-input {
   width: 330px;
   margin-top: 15px; }
 
+.modal-sent-text {
+  margin-top: 10px;
+  padding: 0 10px 24px;
+  text-align: center;
+  border-bottom: 2px solid #e0eaf2; }
+  .modal-sent-text p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000; }
+
+.modal-small {
+  max-width: 815px !important; }
+
+.modal-sent-form {
+  padding-top: 0; }
+  .modal-sent-form .modal-contacts-col {
+    margin-top: 0; }
+  .modal-sent-form .btn-blue {
+    margin: 0;
+    text-align: center; }
+
+.modal-work-sent {
+  margin: 52px 0 48px; }
+  .modal-work-sent li {
+    max-width: 380px; }
+  .modal-work-sent .modal-work-title {
+    white-space: normal; }
+
 @supports (-webkit-touch-callout: none) {
   .nav__container, .nav__content {
     height: -webkit-fill-available; } }
@@ -6853,7 +6881,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     font-size: 14px !important;
     line-height: 45px !important;
     height: 45px !important;
-    width: 190px; }
+    width: 190px !important; }
   .modal-big {
     max-width: 680px !important; }
   .modal-work-icon img {
@@ -6954,7 +6982,21 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
       .btn-add-input i::after {
         width: 2px;
         height: 10px;
-        margin: -5px 0 0 -1px; } }
+        margin: -5px 0 0 -1px; }
+  .modal-sent-text {
+    margin-top: 0;
+    padding: 0 10px 15px; }
+    .modal-sent-text p {
+      font-size: 16px;
+      line-height: 25px; }
+  .modal-small {
+    max-width: 680px !important; }
+  .modal-sent-form {
+    padding-top: 0; }
+  .modal-work-sent {
+    margin: 42px 0 38px; }
+    .modal-work-sent li {
+      max-width: 330px; } }
 
 /* END 1279px */
 /* START 1023px */
@@ -8041,7 +8083,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
             justify-content: space-between;
     padding: 0 10px; }
   .btn-bottom-fix {
-    width: 140px; }
+    width: 140px !important; }
   .tooltip-text {
     top: 50%; }
   .sliderSpeaker .slick-slide {
@@ -8206,7 +8248,18 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     height: 8px;
     margin: -4px 0 0 -1px; }
   .ed-input {
-    padding: 0 10px; } }
+    padding: 0 10px; }
+  .modal-sent-text p {
+    font-size: 14px;
+    line-height: 22px; }
+  .modal-work-sent li {
+    max-width: 290px; }
+  .modal-sent-form {
+    padding-top: 0; }
+  .modal-work-sent {
+    margin: 20px 0 10px; }
+  .modal-sent-text {
+    padding-bottom: 0; } }
 
 /* END 639px */
 /* START 413px */

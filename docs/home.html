@@ -20,8 +20,8 @@
 		<link rel="icon" href="images/touch/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" href="images/touch/android-icon-192x192.png" sizes="196x196">
 		<link rel="manifest" href="images/touch/manifest.json">
-		<link rel="stylesheet" href="css/main.css?v=1597297193843">
-		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597297193843">
+		<link rel="stylesheet" href="css/main.css?v=1597305725329">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597305725329">
 	</head>
 	<body>
 		<header>
@@ -883,7 +883,7 @@
 		<div class="bottom-fixed">
 			<div><a class="btn-bottom-fix btn-blue link-scroll" href="#buy">Купить билет</a></div>
 			<div><a class="btn-bottom-fix btn-red" data-fancybox="contacts" data-src="#contacts" href="javascript:;">Связаться</a></div>
-		</div>
+		</div><a data-fancybox="modalSent" data-src="#modalSent" href="javascript:;" style="display: none !important;"></a>
 		<div class="modal-container modal-big" id="contacts">
 			<div class="modal-content">
 				<div class="modal-title">связаться с нами</div>
@@ -1026,11 +1026,32 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1597297193844"></script>
-		<script src="js/main.js?v=1597297193844"></script>
-		<script src="js/aos.js?v=1597297193844"></script>
-		<script src="js/packery.pkgd.min.js?v=1597297193844"></script>
-		<script src="js/jquery.fancybox.min.js?v=1597297193844"></script>
-		<script src="js/common.js?v=1597297193844"></script>
+		<div class="modal-container modal-small" id="modalSent">
+			<div class="modal-content">
+				<div class="modal-title">ваша Заявка<br>отправлена!</div>
+				<div class="modal-sent-text">
+					<p>Спасибо, что оставили заявку! <br> Мы внимательно с ней ознакомимся <br> и ответим вам на почту в течение недели.</p>
+				</div>
+				<ul class="modal-work-list modal-work-sent">
+					<li class="modal-work-item">
+						<div class="modal-work-icon"><img src="images/sprites/svg/icon-email.svg" alt="#"></div>
+						<div class="modal-work-box">
+							<div class="modal-work-title">Если у вас срочный вопрос, напишите нам на почту</div><a href="mailto:speak@edcrunch.ru">speak@edcrunch.ru</a>
+						</div>
+					</li>
+				</ul>
+				<div class="modal-contacts-form modal-sent-form">
+					<div class="modal-contacts-row">
+						<div class="modal-contacts-col m-col-12 modal-contacts-actions mb-0"><a class="btn-blue btn-contact submit-speakers" href="#">Отправить заявку</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor.js?v=1597305725329"></script>
+		<script src="js/main.js?v=1597305725329"></script>
+		<script src="js/aos.js?v=1597305725329"></script>
+		<script src="js/packery.pkgd.min.js?v=1597305725329"></script>
+		<script src="js/jquery.fancybox.min.js?v=1597305725329"></script>
+		<script src="js/common.js?v=1597305725329"></script>
 	</body>
 </html>
