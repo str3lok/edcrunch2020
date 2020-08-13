@@ -451,7 +451,33 @@ $('.link-scroll').on('click', function (e) {
 
   var boxHash = $(this).attr('href');
   scrollTo($(boxHash).offset().top + 50, 1000);
-}); //-время в инпуте
+}); //- добавить поле в форме
+
+function addInput(text, parentBox) {
+  $(parentBox).before('<div class="modal-contacts-col m-col-12">' + '<input class="ed-input" type="text" placeholder="' + text + '" autocomplete="off">' + '</div>');
+} //- добавить поле Ссылки на профили в социальных сетях
+
+
+$('.btn-add-socail').on('click', function (e) {
+  e.preventDefault();
+  var parentCol = $(this).closest('.m-col-add');
+  addInput('Ссылки на профили в социальных сетях', parentCol);
+}); //- добавить поле Ссылки на выступления
+
+$('.btn-add-speech').on('click', function (e) {
+  e.preventDefault();
+  var parentCol = $(this).closest('.m-col-add');
+  addInput('Ссылки на выступления', parentCol);
+}); //количество введенных символов
+
+function limitChars(myObject, typeChars) {
+  $(myObject).on('keyup', function (e) {
+    var count = $(this).val().length;
+    $(typeChars).text(count);
+  });
+}
+
+limitChars('.theme-textarea', '.theme-symbol span'); //-время в инпуте
 // $('.ed-timepicker').inputmask("00:00"); 
 // $('.ed-timepicker').on('change', function(){
 // 	var time = $(this).val();

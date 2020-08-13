@@ -20,8 +20,8 @@
 		<link rel="icon" href="images/touch/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" href="images/touch/android-icon-192x192.png" sizes="196x196">
 		<link rel="manifest" href="images/touch/manifest.json">
-		<link rel="stylesheet" href="css/main.css?v=1597248839201">
-		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597248839201">
+		<link rel="stylesheet" href="css/main.css?v=1597297193843">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1597297193843">
 	</head>
 	<body>
 		<header>
@@ -260,7 +260,7 @@
 						</div>
 						<div class="speaker-main-action">
 							<div class="speaker-main-row">
-								<div class="speaker-main-col"><a class="btn-speaker-border-blue" href="#">Стать спикером</a></div>
+								<div class="speaker-main-col"><a class="btn-speaker-border-blue" data-fancybox="modalSpeakers" data-src="#modalSpeakers" href="javascript:;">Стать спикером</a></div>
 								<div class="speaker-main-col"><a class="btn-speaker-blue" href="#">Посмотреть всех спикеров</a></div>
 							</div>
 						</div>
@@ -953,11 +953,84 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1597248839202"></script>
-		<script src="js/main.js?v=1597248839202"></script>
-		<script src="js/aos.js?v=1597248839202"></script>
-		<script src="js/packery.pkgd.min.js?v=1597248839202"></script>
-		<script src="js/jquery.fancybox.min.js?v=1597248839202"></script>
-		<script src="js/common.js?v=1597248839202"></script>
+		<div class="modal-container modal-big" id="modalSpeakers">
+			<div class="modal-content">
+				<div class="modal-title">СТАТЬ СПИКЕРОМ <br>EDCRUNCH</div>
+				<div class="modal-contacts-form modal-speakers-from">
+					<div class="clear"></div>
+					<form class="modal-contacts-row" action="#" method="post">
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="text" placeholder="Имя и фамилия *" autocomplete="off" required>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="email" placeholder="Электронная почта" autocomplete="off">
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="text" placeholder="Место работы *" autocomplete="off" required>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="text" placeholder="Должность *" autocomplete="off" required>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="text" placeholder="Ссылки на профили в социальных сетях *" autocomplete="off" required>
+						</div>
+						<div class="modal-contacts-col m-col-12 m-col-add"><a class="btn-add-input btn-add-socail" href="#"> <i></i><span>Добавить ещё одну</span></a></div>
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="text" placeholder="Ссылки на выступления *" autocomplete="off" required>
+						</div>
+						<div class="modal-contacts-col m-col-12 m-col-add"><a class="btn-add-input btn-add-speech" href="#"> <i></i><span>Добавить ещё одну</span></a></div>
+						<div class="modal-contacts-col m-col-12">
+							<select class="select-css ed-select-css">
+								<option value="Направление выступления *">Направление выступления *</option>
+								<option value="Дошкольное образование">Дошкольное образование</option>
+								<option value="Школьное образование">Школьное образование</option>
+								<option value="Высшее образование">Высшее образование</option>
+								<option value="Корпоративное выступление">Корпоративное выступление</option>
+								<option value="EdTech">EdTech</option>
+							</select>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<input class="ed-input" type="text" placeholder="Тема индивидуального выступления *" autocomplete="off" required>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<select class="select-css ed-select-css" required>
+								<option value="Формат выступления выступления *">Формат выступления выступления *</option>
+								<option value="Мастер-класс">Мастер-класс</option>
+								<option value="Презентация">Презентация</option>
+								<option value="Кейс-сессия">Кейс-сессия</option>
+							</select>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<textarea class="ed-input" placeholder="Короткое описание выступления *" autocomplete="off" rows="3" required></textarea>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<textarea class="ed-input" placeholder="Целевая аудитория выступления *" autocomplete="off" rows="3" required></textarea>
+						</div>
+						<div class="modal-contacts-col m-col-12 m-col-maxlength">
+							<textarea class="ed-input theme-textarea" placeholder="На какую тему вы хотели бы выступить в панельной дискуссии?" autocomplete="off" rows="3" maxlength="300"></textarea>
+							<div class="maxlength-symbol theme-symbol"><span>0</span>/300</div>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<textarea class="ed-input" placeholder="Перечислите вопросы, которые вы можете осветить в рамках панельной дискуссии" autocomplete="off" rows="3"></textarea>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<textarea class="ed-input" placeholder="Могли бы вы порекомендовать российских и зарубежных спикеров для нашей конференции?" autocomplete="off" rows="3"></textarea>
+						</div>
+						<div class="modal-contacts-col m-col-12">
+							<div class="modal-contacts-text-required">* - звёздочкой помечаны обязательные поля для заполнения</div>
+						</div>
+						<div class="modal-contacts-col m-col-12 modal-contacts-actions mb-0">
+							<button class="btn-blue btn-contact submit-speakers" type="submit">Отправить заявку</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor.js?v=1597297193844"></script>
+		<script src="js/main.js?v=1597297193844"></script>
+		<script src="js/aos.js?v=1597297193844"></script>
+		<script src="js/packery.pkgd.min.js?v=1597297193844"></script>
+		<script src="js/jquery.fancybox.min.js?v=1597297193844"></script>
+		<script src="js/common.js?v=1597297193844"></script>
 	</body>
 </html>
