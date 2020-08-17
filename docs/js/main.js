@@ -216,6 +216,43 @@ $("body").on('click', function () {
   if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile') && windowWidth >= 1280 || windowWidth >= 768 && windowWidth <= 1279) {
     $('.main-nav').find('.is-active').removeClass('is-active');
   }
+}); // если устройство планшет показываем элементы по клику т.к. ховера на тач устройствах нет
+
+if (!$('html').hasClass('is-device-tablet') || !$('html').hasClass('is-device-mobile')) {
+  //- tooltip Для государственных образовательных организаций
+  $('.tooltip-link').on('mouseenter', function (e) {
+    $(this).parent().addClass('is-active');
+  }); //убираем курсор мыши
+
+  $('.tooltip-link').on('mouseleave ', function (e) {
+    $(this).parent().removeClass('is-active');
+  });
+} //- end is-device-tablet
+//- tooltip по клику
+
+
+$('.tooltip-link').on('click', function (evnTooltip) {
+  evnTooltip.preventDefault();
+
+  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
+    if (!$(this).parent().hasClass('is-active')) {
+      $(this).parent().addClass('is-active');
+    } else {
+      $(this).parent().removeClass('is-active');
+    }
+
+    evnTooltip.stopPropagation();
+  }
+});
+$(".tooltip-text").on('click', function (evnTooltip) {
+  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
+    evnTooltip.stopPropagation();
+  }
+});
+$("body").on('click', function () {
+  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
+    $('.tooltip-box').removeClass('is-active');
+  }
 }); //- слайдер на главной - СПИКЕРЫ EDCRUNCH 2020 	
 
 $('.sliderSpeaker').slick({
@@ -268,128 +305,6 @@ $('.sliderNews').slick({
       slidesToScroll: 1
     }
   }]
-}); //- таймер
-
-function getTimeRemaining(endtime) {
-  var total = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor(total / 1000 % 60);
-  var minutes = Math.floor(total / 1000 / 60 % 60);
-  var hours = Math.floor(total / (1000 * 60 * 60) % 24);
-  var days = Math.floor(total / (1000 * 60 * 60 * 24));
-  return {
-    total: total,
-    days: days,
-    hours: hours,
-    minutes: minutes,
-    seconds: seconds
-  };
-}
-
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-} //- запуск обратного отсчета
-
-
-var deadline = '2020-08-31';
-initializeClock('clockdiv', deadline); // если устройство планшет показываем элементы по клику т.к. ховера на тач устройствах нет
-
-if (!$('html').hasClass('is-device-tablet') || !$('html').hasClass('is-device-mobile')) {
-  //- tooltip Для государственных образовательных организаций
-  $(".tooltip-link").hover(function () {
-    $(this).parent().addClass('is-active');
-  }, function () {
-    $(this).parent().removeClass('is-active');
-  }); // //- тригеры по ховеру 
-  // $(".year-triger-btn").hover(
-  // 	function () {
-  // 		$(this).parent().addClass('is-active');
-  // 	},
-  // 	function () {
-  // 		$(this).parent().removeClass('is-active');
-  // 	}
-  // );    
-} //- end is-device-tablet
-//- tooltip по клику
-
-
-$('.tooltip-link').on('click', function (evnTooltip) {
-  evnTooltip.preventDefault();
-
-  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
-    if (!$(this).parent().hasClass('is-active')) {
-      $(this).parent().addClass('is-active');
-    } else {
-      $(this).parent().removeClass('is-active');
-    }
-
-    evnTooltip.stopPropagation();
-  }
-});
-$(".tooltip-text").on('click', function (evnTooltip) {
-  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
-    evnTooltip.stopPropagation();
-  }
-});
-$("body").on('click', function () {
-  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
-    $('.tooltip-box').removeClass('is-active');
-  }
-}); //- тригеры по клику
-
-$('.year-triger-btn').on('click', function (evnTriger) {
-  evnTriger.preventDefault();
-  var windowWidth = $(window).outerWidth();
-
-  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile') || windowWidth <= 1279) {
-    var parentItemTriger = $(this).closest('li'),
-        mainTrigerList = $(this).closest('.last-year-triger-list');
-
-    if (!$(parentItemTriger).hasClass('is-active')) {
-      $(mainTrigerList).find('.is-active').removeClass('is-active');
-      $(parentItemTriger).addClass('is-active');
-    } else {
-      $(parentItemTriger).removeClass('is-active');
-    }
-
-    evnTriger.stopPropagation();
-  }
-});
-$(".year-triger-content").on('click', function (evnTriger) {
-  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
-    evnTriger.stopPropagation();
-  }
-});
-$("body").on('click', function () {
-  if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
-    $('.last-year-triger-list').find('.is-active').removeClass('is-active');
-  }
-}); //Воспроизведение видео    
-
-$('.video-link').on('click', function (e) {
-  e.preventDefault();
-  var playVideoId = $(this).attr('data-videoId');
-  var parentVideo = $(this).closest('.main-video-box');
-  $(parentVideo).addClass('is-play');
-  $(parentVideo).prepend('<div class="videoBox"><iframe class="frameVideo" type="text/html" src="https://www.youtube.com/embed/' + playVideoId + '?rel=0&showinfo=0&controls=0&autoplay=1&wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe></div>');
 }); //- слайдер на главной - ЧТО ГОВОРЯТ СПИКЕРЫ EDCRUNCH
 
 $('.sliderReviews').slick({
@@ -400,6 +315,14 @@ $('.sliderReviews').slick({
   arrows: true,
   lazyLoad: 'ondemand',
   touchThreshold: 50
+}); //Воспроизведение видео    
+
+$('.video-link').on('click', function (e) {
+  e.preventDefault();
+  var playVideoId = $(this).attr('data-videoId');
+  var parentVideo = $(this).closest('.main-video-box');
+  $(parentVideo).addClass('is-play');
+  $(parentVideo).prepend('<div class="videoBox"><iframe class="frameVideo" type="text/html" src="https://www.youtube.com/embed/' + playVideoId + '?rel=0&showinfo=0&controls=0&autoplay=1&wmode=opaque&enablejsapi=1" frameborder="0" allowfullscreen></iframe></div>');
 }); //- show menu mobile
 
 $('.touch-nav').on('click', function (e) {
@@ -422,23 +345,6 @@ function closeMobileMenu() {
 $('.nav-close, .nav-hide').on('click', function (e) {
   e.preventDefault();
   closeMobileMenu();
-}); // show/hide ДЛЯ ВСЕХ УЧАСТНИКОВ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА
-
-$('.btn-tl-js').on('click', function (e) {
-  e.preventDefault();
-  var parentList = $(this).closest('.themes-list'),
-      parentItem = $(this).closest('li');
-
-  if ($(this).hasClass('is-active')) {
-    $(this).removeClass('is-active');
-    $(parentItem).find('.tl-link').slideUp();
-  } else {
-    var activeItem = $(parentList).find('.is-active').closest('li');
-    $(activeItem).find('.tl-link').slideUp();
-    $(activeItem).find('.is-active').removeClass('is-active');
-    $(this).addClass('is-active');
-    $(parentItem).find('.tl-link').slideDown();
-  }
 }); //- плавная прокрутка до блоков
 
 $('.link-scroll').on('click', function (e) {
@@ -477,15 +383,57 @@ function limitChars(myObject, typeChars) {
   });
 }
 
-limitChars('.theme-textarea', '.theme-symbol span'); //-время в инпуте
-// $('.ed-timepicker').inputmask("00:00"); 
-// $('.ed-timepicker').on('change', function(){
-// 	var time = $(this).val();
-// 	var min = time.split( ":" );
-// 	if (min[1] >= 60) {
-// 		$(this).val(min[0]+':00');
-// 	}
-// });
+limitChars('.theme-textarea', '.theme-symbol span'); //- количество пукнтов
+
+function endingText(numb) {
+  if (numb == 1 || numb == 21 || numb == 31 || numb == 41 || numb == 51) {
+    return "пункт";
+  } else if (numb >= 2 && numb <= 4 || numb >= 22 && numb <= 24 || numb >= 32 && numb <= 34 || numb >= 42 && numb <= 44 || numb >= 52 && numb <= 54) {
+    return "пункта";
+  } else {
+    return "пунктов";
+  }
+} //- показать селект для выбора чекбоксов на странице спикеры
+
+
+$('.filter-btn-js').on('click', function (evnOptionBox) {
+  evnOptionBox.preventDefault();
+  var filterBox = $(this).closest('.page-filter-box');
+
+  if ($(this).hasClass('is-active')) {
+    $(filterBox).find('.filter-box-option').slideUp();
+    $(this).removeClass('is-active');
+  } else {
+    var activeSelect = $('.filter-sections').find('.filter-btn-js.is-active');
+    $(activeSelect).parent().find('.filter-box-option').slideUp();
+    $(activeSelect).removeClass('is-active');
+    $(filterBox).find('.filter-box-option').slideDown();
+    $(this).addClass('is-active');
+  }
+
+  evnOptionBox.stopPropagation();
+});
+$(".filter-box-option").on('click', function (evnOptionBox) {
+  evnOptionBox.stopPropagation();
+});
+$("body").on('click', function () {
+  var activeSelectBody = $('.filter-sections').find('.filter-btn-js.is-active');
+  $(activeSelectBody).parent().find('.filter-box-option').slideUp();
+  $(activeSelectBody).removeClass('is-active');
+});
+
+function countCheckedBox(mainBox) {
+  var parentSelectBox = $(mainBox);
+  var parentOptionBox = $(mainBox).find('.filter-box-option');
+  var countChecket = $(parentOptionBox).find('input:checked').length;
+  $(parentSelectBox).find('.filter-btn-js span').text('Выбрано ' + countChecket + ' ' + endingText(countChecket));
+} //-посчет выбранных пунктов 
+
+
+$('.filter-option-js').on('click', function (e) {
+  var selectBox = $(this).closest('.page-filter-box');
+  countCheckedBox(selectBox);
+}); //- програмный селект 
 
 function scrollTo(to) {
   var $obj = jQuery('html, body');
@@ -531,6 +479,15 @@ function scrollTo(to) {
 }
 
 function loadPage() {
+  //- при обновлении страницы, если есть селекты на страницы запускаем подсчет в них выбранных пунктов
+  if ($('.filter-btn-js')) {
+    $('.page-filter-box').each(function () {
+      countCheckedBox($(this));
+    });
+  }
+
+  ;
+
   try {} catch (e) {}
 } //end loadPage
 
@@ -546,7 +503,9 @@ function resizePage() {
   $('body').removeClass('navFix');
 
   if (windowWidth >= 768) {
-    $('.tl-link').removeAttr('style');
+    try {
+      $('.tl-link').removeAttr('style');
+    } catch (e) {}
   }
 } //end resizePage
 
