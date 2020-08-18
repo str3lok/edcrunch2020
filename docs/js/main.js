@@ -236,6 +236,7 @@ $('.tooltip-link').on('click', function (evnTooltip) {
 
   if ($('html').hasClass('is-device-tablet') || $('html').hasClass('is-device-mobile')) {
     if (!$(this).parent().hasClass('is-active')) {
+      $('body').find('.tooltip-box.is-active').removeClass('is-active');
       $(this).parent().addClass('is-active');
     } else {
       $(this).parent().removeClass('is-active');
@@ -359,21 +360,21 @@ $('.link-scroll').on('click', function (e) {
   scrollTo($(boxHash).offset().top + 50, 1000);
 }); //- добавить поле в форме
 
-function addInput(text, parentBox) {
-  $(parentBox).before('<div class="modal-contacts-col m-col-12">' + '<input class="ed-input" type="text" placeholder="' + text + '" autocomplete="off">' + '</div>');
+function addInput(text, parentBox, inputName) {
+  $(parentBox).before('<div class="modal-contacts-col m-col-12">' + '<input class="ed-input" type="text" name="' + inputName + '" placeholder="' + text + '" autocomplete="off">' + '</div>');
 } //- добавить поле Ссылки на профили в социальных сетях
 
 
 $('.btn-add-socail').on('click', function (e) {
   e.preventDefault();
   var parentCol = $(this).closest('.m-col-add');
-  addInput('Ссылки на профили в социальных сетях', parentCol);
+  addInput('Ссылки на профили в социальных сетях', parentCol, 'social_links[]');
 }); //- добавить поле Ссылки на выступления
 
 $('.btn-add-speech').on('click', function (e) {
   e.preventDefault();
   var parentCol = $(this).closest('.m-col-add');
-  addInput('Ссылки на выступления', parentCol);
+  addInput('Ссылки на выступления', parentCol, 'speeches_links[]');
 }); //количество введенных символов
 
 function limitChars(myObject, typeChars) {
