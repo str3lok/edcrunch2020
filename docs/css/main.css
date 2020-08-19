@@ -8059,6 +8059,10 @@ header,
 .modal-contacts-row {
   margin: 0 -10px; }
 
+.modal-contacts-label {
+  color: #000;
+  font: 16px/19px "Inter-SemiBold", sans-serif; }
+
 .modal-contacts-col {
   display: block;
   float: left;
@@ -8762,7 +8766,9 @@ textarea.ed-input {
   margin-top: 22px; }
 
 .error-message {
-  display: none;
+  display: none; }
+
+.error-message, .form-messages.error {
   width: 100%;
   float: left;
   color: #d62246;
@@ -8772,7 +8778,7 @@ textarea.ed-input {
 .error .error-message {
   display: block; }
 
-.error .ed-input {
+.error .ed-input, .error .subscribe-input {
   color: #d62246 !important;
   border-color: #d62246 !important; }
 
@@ -9731,6 +9737,9 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     margin: 0; }
   .modal-contacts-col {
     padding: 0; }
+  .modal-contacts-label {
+    font-size: 14px;
+    line-height: 18px; }
   .ed-input {
     height: 50px;
     font-size: 14px;
@@ -9853,7 +9862,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     font-size: 20px; }
   .filter-option-checkbox {
     top: 11px; }
-  .error-message {
+  .error-message, .form-messages.error {
     font-size: 14px; }
   .btn-detail-page.btn-prev-page {
     left: -40px; }
