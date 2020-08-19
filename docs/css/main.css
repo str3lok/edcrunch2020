@@ -8373,8 +8373,16 @@ textarea.ed-input {
     -o-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s; }
+  .speakers-grid-item-link:hover .speakers-grid-item-text {
+    max-height: 180px; }
   .speakers-grid-item-link:hover::before {
     height: 95%; }
+  .speakers-grid-item-link:hover .speakers-grid-item-info {
+    -webkit-transform: translateY(-30px);
+       -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+         -o-transform: translateY(-30px);
+            transform: translateY(-30px); }
 
 .speakers-grid-item-photo {
   height: 100%;
@@ -8406,7 +8414,13 @@ textarea.ed-input {
   left: 0;
   bottom: 0;
   padding: 0 20px 23px;
-  z-index: 5; }
+  z-index: 5;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out, -moz-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out, -moz-transform 0.2s ease-out, -o-transform 0.2s ease-out; }
 
 .speakers-grid-item-name {
   font: 24px/28px "HalvarBreit-Rg", sans-serif;
@@ -8415,7 +8429,11 @@ textarea.ed-input {
 
 .speakers-grid-item-text {
   font: 14px/20px "Inter-Regular", sans-serif;
-  color: #fff; }
+  color: #fff;
+  display: block;
+  max-height: 42px;
+  overflow: hidden;
+  width: 100%; }
 
 .page-panel-botom {
   display: -webkit-box;
@@ -9269,8 +9287,18 @@ textarea.ed-input {
   .is-device-mobile .speakers-detail__navigation-back:hover .speakers-detail-navigation-back-btn::after, .is-device-tablet .speakers-detail__navigation-back:hover .speakers-detail-navigation-back-btn::after {
     opacity: 0; }
 
+.is-device-mobile .speakers-grid-item-link:hover .speakers-grid-item-text, .is-device-tablet .speakers-grid-item-link:hover .speakers-grid-item-text {
+  max-height: 42px; }
+
 .is-device-mobile .speakers-grid-item-link:hover::before, .is-device-tablet .speakers-grid-item-link:hover::before {
   height: 37%; }
+
+.is-device-mobile .speakers-grid-item-link:hover .speakers-grid-item-info, .is-device-tablet .speakers-grid-item-link:hover .speakers-grid-item-info {
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0); }
 
 .is-device-mobile .pagination-link:hover, .is-device-tablet .pagination-link:hover {
   color: #17118b; }
