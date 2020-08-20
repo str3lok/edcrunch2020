@@ -5,7 +5,7 @@
   position: absolute; }
 
 .d-block, .rb-select, header, .header-panel-top, .header-container, .sub-nav li, footer, .footer-sponsor, .footer-sponsor-left, .footer-sponsor-right, .footer-sponsor-title, .footer-blue-container, .footer-contacts-container, .page-content, .wrapper, .main-bn, .main-bn-wrap, .main-bn-container, .main-bn-title, .text-anime-container, .idea-container, .idea-text, .themes-container, .themes-list, .themes-list li, .tl-title, .speakers-container, .speaker-main-slider, .speaker-slider-box, .speaker-slider-name, .speaker-slider-text, .speaker-main-action, .btn-speaker-border-blue,
-.btn-speaker-blue, .main-media-partners, .main-news-container, .main-news-slider, .main-news-action, .main-news-box, .main-news-text, .main-by-tickets-container, .main-by-tickets-title, .main-by-tickets-content, .main-by-tickets-list, .main-by-tickets-count, .main-by-tickets-count-box, .main-by-tickets-counter-text, .main-by-tickets-counter-action, .main-by-tickets-counter-action a, .main-by-container, .main-subscribe, .main-subscribe-form, .subscribe-input, .btn-subscribe, .main-last-year, .last-year-container, .year-triger-title, .year-triger-text, .main-video, .main-video-box, .main-reviews, .main-reviews-slider, .main-participants-say, .main-participants-content, .participants-grid, .main-bottom-text, .bottom-text-block, .modal-content, .modal-title, .modal-contacts-title, .modal-contacts-social, .modal-contacts-form, .ed-input, .ed-select-css, .modal-contacts-text-required, .modal-sent-text, .page-child-content, .page-title-box, .page-filter, .page-filter-label, .page-filter-box, .filter-btn, .filter-box-option li, .filter-option-label, .speakers-grid-item, .speakers-grid-item-link, .speakers-grid-item-name, .speaker-detail, .speakers-detail-navigation, .speakers-detail__wrapper, .speakers-detail__about-image, .speakers-detail__about-last-year, .speakers-detail__about-heading, .speakers-detail__event, .speakers-detail__event-heading, .agenda__program, .agenda__program-event, .agenda__program-event-hashtag-content, .agenda__program-event-name, .agenda__program-event-box, .agenda__program-event-box-title, .agenda__program-event-box-list, .agenda__program-event-box-list li {
+.btn-speaker-blue, .main-media-partners, .main-news-container, .main-news-slider, .main-news-action, .main-news-box, .main-news-text, .main-by-tickets-container, .main-by-tickets-title, .main-by-tickets-content, .main-by-tickets-list, .main-by-tickets-count, .main-by-tickets-count-box, .main-by-tickets-counter-text, .main-by-tickets-counter-action, .main-by-tickets-counter-action a, .main-by-container, .main-subscribe, .main-subscribe-form, .subscribe-input, .btn-subscribe, .main-last-year, .last-year-container, .year-triger-title, .year-triger-text, .main-video, .main-video-box, .main-reviews, .main-reviews-slider, .main-participants-say, .main-participants-content, .participants-grid, .main-bottom-text, .bottom-text-block, .modal-content, .modal-title, .modal-contacts-title, .modal-contacts-social, .modal-contacts-form, .ed-input, .ed-select-css, .modal-contacts-text-required, .modal-sent-text, .page-child-content, .page-title-box, .page-filter, .page-filter-label, .page-filter-box, .filter-btn, .filter-box-option li, .filter-option-label, .speakers-grid-item, .speakers-grid-item-link, .speakers-grid-item-name, .speaker-detail, .speakers-detail-navigation, .speakers-detail__wrapper, .speakers-detail__about-image, .speakers-detail__about-last-year, .speakers-detail__about-heading, .speakers-detail__event, .speakers-detail__event-heading, .agenda__program, .agenda__program-event-hashtag-header, .agenda__program-event, .agenda__program-event-hashtag-content, .agenda__program-event-name, .agenda__program-event-box, .agenda__program-event-box-title, .agenda__program-event-box-list, .agenda__program-event-box-list li {
   display: block;
   float: left;
   width: 100%; }
@@ -8950,13 +8950,16 @@ textarea.ed-input {
   color: #17118b;
   margin-bottom: 41px; }
 
+.agenda__program-event-hashtag-header {
+  border-bottom: 1px solid #c7d3d9;
+  padding: 20px 30px; }
+
 .agenda__program-event {
   margin-bottom: 23px;
   background: #F5F5F5;
   -webkit-border-radius: 25px;
      -moz-border-radius: 25px;
-          border-radius: 25px;
-  padding: 25px 0 0; }
+          border-radius: 25px; }
 
 .agenda__program-event-hashtag-list {
   display: -webkit-box;
@@ -8968,7 +8971,7 @@ textarea.ed-input {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 17px; }
+  margin-bottom: 21px; }
 
 .agenda__program-event-hashtag {
   display: -webkit-box;
@@ -9047,8 +9050,7 @@ textarea.ed-input {
           align-items: center;
   width: 100%;
   font: 14px/19px "HalvarBreit-Bd", sans-serif;
-  color: #000;
-  margin-bottom: 13px; }
+  color: #000; }
 
 .agenda__program-event-special-time-icon {
   display: block;
@@ -9061,8 +9063,8 @@ textarea.ed-input {
   margin-right: 7px; }
 
 .agenda__program-event-hashtag-content {
-  padding: 0 30px 8px;
-  border-bottom: 1px solid #98b1be; }
+  padding: 20px 30px 8px;
+  border-bottom: 1px solid #c7d3d9; }
 
 .agenda__program-event-name {
   margin-bottom: 6px; }
@@ -10001,8 +10003,10 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
   .speakers-detail__about-video-time {
     font-size: 16px;
     line-height: 20px; }
+  .agenda__program-event-hashtag-header {
+    padding: 20px; }
   .agenda__program-event-hashtag-content {
-    padding: 0 20px 8px; }
+    padding: 20px 20px 8px; }
   .agenda__program-event-hashtag-footer {
     padding-left: 20px;
     padding-right: 20px; }
@@ -11076,10 +11080,11 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
     margin-bottom: 20px;
     -webkit-border-radius: 20px;
        -moz-border-radius: 20px;
-            border-radius: 20px;
-    padding: 15px 0 0; }
+            border-radius: 20px; }
+  .agenda__program-event-hashtag-header {
+    padding: 15px; }
   .agenda__program-event-hashtag-content {
-    padding: 0 15px 8px; }
+    padding: 15px 15px 8px; }
   .agenda__program-event-hashtag {
     padding: 0;
     width: 100%;
