@@ -9196,7 +9196,8 @@ textarea.ed-input {
   position: relative;
   padding-left: 19px;
   color: #98b1be;
-  font: 14px/16px "HalvarBreit-Rg", sans-serif; }
+  font: 14px/16px "HalvarBreit-Rg", sans-serif;
+  white-space: nowrap; }
   .agenda__program-event-group-count-box::before {
     left: 0;
     top: 0;
@@ -9262,10 +9263,6 @@ textarea.ed-input {
     .agenda__program-event-btn-trash:hover::after {
       opacity: 1; }
 
-@supports (-webkit-touch-callout: none) {
-  .nav__container, .nav__content {
-    height: -webkit-fill-available; } }
-
 .is-device-mobile .agenda__program-event-btn:hover, .is-device-tablet .agenda__program-event-btn:hover {
   background: #17118b;
   color: #17118b; }
@@ -9279,6 +9276,100 @@ textarea.ed-input {
 
 .is-device-mobile .agenda__program-event-name a:hover, .is-device-tablet .agenda__program-event-name a:hover {
   text-decoration: none; }
+
+/* START 1365px */
+/* END 1365px */
+/* START 1279px */
+/* END 1279px */
+/* START 1023px */
+@media (max-width: 1023px) {
+  .agenda__program-event-hashtag-header {
+    padding: 20px; }
+  .agenda__program-event-hashtag-content {
+    padding: 20px 20px 8px; }
+  .agenda__program-event-hashtag-footer {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .agenda__program-event-hashtag {
+    padding: 0 20px; }
+  .agenda__program-event-name a {
+    font-size: 16px;
+    line-height: 26px; } }
+
+/* END 1023px */
+/* START 959px */
+@media (max-width: 959px) {
+  .agenda__program-event-box-list {
+    max-width: 100%; } }
+
+/* END 959px */
+/* START 767px */
+@media (max-width: 767px) {
+  .agenda__program-event {
+    margin-bottom: 20px;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px; }
+  .agenda__program-event-hashtag-header {
+    padding: 15px; }
+  .agenda__program-event-hashtag-content {
+    padding: 15px 15px 8px; }
+  .agenda__program-event-hashtag {
+    padding: 0;
+    width: 100%;
+    border: 0;
+    margin-bottom: 15px; }
+    .agenda__program-event-hashtag:last-child {
+      margin-bottom: 0; }
+  .agenda__program-event-hashtag-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    line-height: 25px;
+    font-size: 5px; }
+  .agenda__program-event-hashtag-text, .agenda__program-event-hashtag.is-workshop {
+    font-size: 12px;
+    line-height: 12px; }
+  .agenda__program-event-special-time-icon {
+    width: 15px;
+    height: 17px; }
+  .agenda__program-event-special-time {
+    font-size: 12px;
+    line-height: 17px; }
+  .agenda__program-event-name a {
+    font-size: 14px;
+    line-height: 24px; }
+  .agenda__program-event-box-list li a {
+    line-height: 18px; }
+  .agenda__program-event-hashtag-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block; }
+  .agenda__program-event-hashtag-footer-left {
+    margin-bottom: 15px; }
+  .agenda__program-event-hashtag-footer-left,
+  .agenda__program-event-hashtag-footer-right {
+    width: 100%; }
+  .agenda__program-event-hashtag-footer-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+/* END 767px */
+/* START 639px */
+/* END 639px */
+/* START 413px */
+/* END 413px */
+@supports (-webkit-touch-callout: none) {
+  .nav__container, .nav__content {
+    height: -webkit-fill-available; } }
 
 .is-device-mobile .speakers-detail__about-social-item, .is-device-tablet .speakers-detail__about-social-item {
   display: block;
@@ -10002,19 +10093,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
             background-size: cover; }
   .speakers-detail__about-video-time {
     font-size: 16px;
-    line-height: 20px; }
-  .agenda__program-event-hashtag-header {
-    padding: 20px; }
-  .agenda__program-event-hashtag-content {
-    padding: 20px 20px 8px; }
-  .agenda__program-event-hashtag-footer {
-    padding-left: 20px;
-    padding-right: 20px; }
-  .agenda__program-event-hashtag {
-    padding: 0 20px; }
-  .agenda__program-event-name a {
-    font-size: 16px;
-    line-height: 26px; } }
+    line-height: 20px; } }
 
 /* END 1023px */
 /* START 959px */
@@ -10327,9 +10406,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
   .speakers-detail__event-heading {
     font-size: 24px;
     line-height: 30px;
-    margin-bottom: 20px; }
-  .agenda__program-event-box-list {
-    max-width: 100%; } }
+    margin-bottom: 20px; } }
 
 /* END 959px */
 /* START 767px */
@@ -11075,63 +11152,7 @@ body:not([class="is-device-tablet"]) .year-triger-content:hover {
   .speakers-detail__event-heading {
     font-size: 20px;
     line-height: 26px;
-    margin-bottom: 20px; }
-  .agenda__program-event {
-    margin-bottom: 20px;
-    -webkit-border-radius: 20px;
-       -moz-border-radius: 20px;
-            border-radius: 20px; }
-  .agenda__program-event-hashtag-header {
-    padding: 15px; }
-  .agenda__program-event-hashtag-content {
-    padding: 15px 15px 8px; }
-  .agenda__program-event-hashtag {
-    padding: 0;
-    width: 100%;
-    border: 0;
-    margin-bottom: 15px; }
-    .agenda__program-event-hashtag:last-child {
-      margin-bottom: 0; }
-  .agenda__program-event-hashtag-icon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    line-height: 25px;
-    font-size: 5px; }
-  .agenda__program-event-hashtag-text, .agenda__program-event-hashtag.is-workshop {
-    font-size: 12px;
-    line-height: 12px; }
-  .agenda__program-event-special-time-icon {
-    width: 15px;
-    height: 17px; }
-  .agenda__program-event-special-time {
-    font-size: 12px;
-    line-height: 17px; }
-  .agenda__program-event-name a {
-    font-size: 14px;
-    line-height: 24px; }
-  .agenda__program-event-box-list li a {
-    line-height: 18px; }
-  .agenda__program-event-hashtag-footer {
-    padding-left: 15px;
-    padding-right: 15px;
-    display: block; }
-  .agenda__program-event-hashtag-footer-left {
-    margin-bottom: 15px; }
-  .agenda__program-event-hashtag-footer-left,
-  .agenda__program-event-hashtag-footer-right {
-    width: 100%; }
-  .agenda__program-event-hashtag-footer-right {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+    margin-bottom: 20px; } }
 
 /* END 767px */
 /* START 639px */
